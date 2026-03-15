@@ -1,0 +1,13 @@
+Category,Source,Variables,Access_URL,Notes
+Raw chain data,Google Cloud Blockchain Analytics,"Blocks, transactions, logs, traces, supported chain datasets",https://docs.cloud.google.com/blockchain-analytics/docs/supported-datasets,"Good for raw on-chain panels on Ethereum and supported chains"
+SQL on-chain analytics,Dune,"Queryable on-chain tables, labels, protocol analytics, exports",https://docs.dune.com/,"Useful for wallet-level event panels and reproducible SQL workflows"
+Curated multi-chain data,Flipside,"Core, DeFi, NFT, bridge, and chain schemas",https://docs.flipsidecrypto.xyz/flipspace/data-explorer,"Includes coverage for Ethereum, Arbitrum, Aptos, and other major ecosystems"
+Protocol indexing,The Graph,"Subgraphs, GraphQL endpoints, protocol-specific event indexing",https://thegraph.com/docs/en/,"Useful for Uniswap- and ENS-specific contract events"
+Market data,CoinGecko API,"Spot prices, volume, market cap, token metadata, exchange coverage",https://docs.coingecko.com/,"Suitable for token price panels and event-study windows"
+DeFi aggregates,DeFiLlama API,"TVL, fees, volumes, unlocks, protocol metadata",https://defillama.com/docs/api,"Useful for protocol-level controls and ecosystem activity"
+Off-chain governance,Snapshot GraphQL API,"Spaces, proposals, votes, strategies, voter records",https://docs.snapshot.box/graphql-api,"Important for DAOs using off-chain signaling"
+On-chain governance,Tally API,"Governor organizations, proposals, delegates, votes, delegations",https://docs.tally.xyz/set-up-and-technical-documentation/welcome,"Useful for EVM governance participation and delegate concentration"
+Institutional case,Uniswap UNI announcement,"Eligibility design, allocation shares, launch details",https://blog.uniswap.org/uni,"Official source for the Uniswap retroactive airdrop"
+Institutional case,ENS token docs,"Token rights, DAO structure, historical claim context",https://docs.ens.domains/dao/token/,"Official source for ENS governance token design"
+Institutional case,Arbitrum Foundation blog,"User point system, anti-sybil deductions, community allocation",https://blog.arbitrum.foundation/arbitrum-the-next-phase-of-decentralization/,"Official source for the ARB airdrop design"
+Institutional case,Aptos Foundation announcement,"Eligibility, claim mechanics, recipient communication",https://aptosfoundation.org/currents/aptos-airdrop-announcement,"Official source for the Aptos airdrop"

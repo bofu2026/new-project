@@ -1,0 +1,4 @@
+symbol,snapshot_space,governance_window_days,proposal_count,avg_votes_per_proposal,median_votes_per_proposal,avg_scores_total,first_proposal_date
+UNI,uniswapgovernance.eth,180,6,72.66666666666667,27.5,3104821.8954087575,2020-09-22
+ENS,ens.eth,180,20,4629.05,377.5,4078293.6432929873,2021-11-08
+ARB,arbitrumfoundation.eth,180,19,45543.36842105263,48444.0,104946423.34608084,2023-03-27

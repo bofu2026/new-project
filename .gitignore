@@ -1,0 +1,4 @@
+pandoc-portable/
+pandoc-portable.zip
+*.tmp
+~$*.docx

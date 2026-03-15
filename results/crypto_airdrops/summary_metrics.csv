@@ -1,0 +1,7 @@
+metric,value
+"Average CAR[0,1]",0.18635303337702486
+"Average CAR[0,+7]",0.1736206375956466
+"Average CAR[0,+30]",0.03243488902198764
+"Average CAR[0,+90]",-0.14921609310661021
+Mean quote volume ratio (post30/post90),3.6701915879774987
+Mean Amihud ratio (post30/post90),0.47010953762867935

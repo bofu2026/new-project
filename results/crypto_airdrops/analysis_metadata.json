@@ -1,0 +1,48 @@
+{
+  "generated_at": "2026-03-08T19:58:05.597075+00:00",
+  "events": [
+    {
+      "symbol": "UNI",
+      "binance_symbol": "UNIUSDT",
+      "label": "Uniswap",
+      "event_date": "2020-09-17",
+      "event_name": "UNI airdrop / trading start",
+      "source_url": "https://blog.uniswap.org/uni",
+      "snapshot_space": "uniswapgovernance.eth"
+    },
+    {
+      "symbol": "ENS",
+      "binance_symbol": "ENSUSDT",
+      "label": "ENS",
+      "event_date": "2021-11-08",
+      "event_name": "ENS claim / trading start",
+      "source_url": "https://docs.ens.domains/dao/token/",
+      "snapshot_space": "ens.eth"
+    },
+    {
+      "symbol": "APT",
+      "binance_symbol": "APTUSDT",
+      "label": "Aptos",
+      "event_date": "2022-10-19",
+      "event_name": "Aptos community airdrop announcement",
+      "source_url": "https://aptosfoundation.org/currents/aptos-airdrop-announcement",
+      "snapshot_space": null
+    },
+    {
+      "symbol": "ARB",
+      "binance_symbol": "ARBUSDT",
+      "label": "Arbitrum",
+      "event_date": "2023-03-23",
+      "event_name": "ARB airdrop claim date",
+      "source_url": "https://blog.arbitrum.foundation/arbitrum-the-next-phase-of-decentralization/",
+      "snapshot_space": "arbitrumfoundation.eth"
+    }
+  ],
+  "benchmark": "equal-weighted BTC/ETH daily return",
+  "notes": [
+    "Daily OHLCV data are sourced from Binance Vision monthly spot kline archives.",
+    "Market-adjusted returns are computed relative to an equal-weighted BTC/ETH benchmark.",
+    "Liquidity proxies use quote-volume ratios, trade counts, and an Amihud-style illiquidity ratio based on dollar trading volume.",
+    "Governance activity is summarized from Snapshot proposals in the 180 days following the airdrop date for protocols with Snapshot spaces."
+  ]
+}
