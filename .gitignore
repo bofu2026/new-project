@@ -2,3 +2,5 @@ pandoc-portable/
 pandoc-portable.zip
 *.tmp
 ~$*.docx
+__pycache__/
+*.pyc
