@@ -1,0 +1,47 @@
+name: Build macOS Video Downloader
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - ".github/workflows/build-video-downloader-macos.yml"
+      - "build_video_downloader_macos.sh"
+      - "scripts/video_downloader.py"
+      - "scripts/video_downloader_gui.py"
+      - "requirements-video-downloader.txt"
+      - "README_video_downloader.md"
+
+jobs:
+  build-macos:
+    runs-on: macos-14
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-video-downloader.txt pyinstaller
+
+      - name: Build app bundle and DMG
+        run: bash ./build_video_downloader_macos.sh
+
+      - name: Upload macOS app bundle
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-downloader-macos-app
+          path: results/video_downloader_package_macos/dist/VideoDownloader.app
+          if-no-files-found: error
+
+      - name: Upload macOS installer DMG
+        uses: actions/upload-artifact@v4
+        with:
+          name: video-downloader-macos-dmg
+          path: results/video_downloader_package_macos/VideoDownloader_macOS.dmg
+          if-no-files-found: error

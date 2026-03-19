@@ -4,3 +4,8 @@ pandoc-portable.zip
 ~$*.docx
 __pycache__/
 *.pyc
+results/video_download_test/
+results/video_download_test2/
+results/video_downloader_build.log
+results/video_downloader_package/
+results/video_downloader_package_macos/
