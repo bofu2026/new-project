@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sepolia Message Board</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"></script>
+  </head>
+  <body>
+    <main class="page-shell">
+      <section class="hero-card">
+        <p class="eyebrow">Web3 Testnet DApp</p>
+        <h1>Sepolia Message Board</h1>
+        <p class="hero-copy">
+          Connect a browser wallet, read the current on-chain message, and submit a
+          new one to the deployed MessageBoard contract on Ethereum Sepolia.
+        </p>
+        <div class="hero-actions">
+          <button id="connectButton" class="primary-button">Connect Wallet</button>
+          <button id="switchNetworkButton" class="secondary-button">
+            Switch to Sepolia
+          </button>
+          <button id="refreshButton" class="secondary-button">Refresh State</button>
+        </div>
+      </section>
+
+      <section class="dashboard-grid">
+        <article class="panel">
+          <h2>Connection</h2>
+          <dl class="info-grid">
+            <div>
+              <dt>Wallet</dt>
+              <dd id="walletAddress">Not connected</dd>
+            </div>
+            <div>
+              <dt>Network</dt>
+              <dd id="networkName">Unknown</dd>
+            </div>
+            <div>
+              <dt>Contract</dt>
+              <dd id="contractAddress">Not configured</dd>
+            </div>
+          </dl>
+        </article>
+
+        <article class="panel">
+          <h2>On-chain State</h2>
+          <dl class="info-grid">
+            <div>
+              <dt>Current Message</dt>
+              <dd id="currentMessage">Not loaded</dd>
+            </div>
+            <div>
+              <dt>Update Count</dt>
+              <dd id="updateCount">0</dd>
+            </div>
+          </dl>
+        </article>
+      </section>
+
+      <section class="panel">
+        <h2>Write a New Message</h2>
+        <form id="messageForm" class="message-form">
+          <label for="messageInput">New message</label>
+          <textarea
+            id="messageInput"
+            rows="4"
+            maxlength="280"
+            placeholder="Type a message to write to the testnet contract..."
+          ></textarea>
+          <button type="submit" class="primary-button">Submit Transaction</button>
+        </form>
+      </section>
+
+      <section class="panel">
+        <h2>Status</h2>
+        <p id="statusBox" class="status-box">
+          Waiting for wallet connection and contract configuration.
+        </p>
+      </section>
+    </main>
+
+    <script src="./config.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

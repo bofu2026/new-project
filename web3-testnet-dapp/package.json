@@ -1,0 +1,18 @@
+{
+  "name": "web3-testnet-dapp",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A minimal Web3 dApp with a Sepolia deployment pipeline and browser wallet UI.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:localhost": "hardhat run scripts/deploy.js --network hardhat",
+    "deploy:sepolia": "hardhat run scripts/deploy.js --network sepolia"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.24.1",
+    "solc": "^0.8.24"
+  }
+}
