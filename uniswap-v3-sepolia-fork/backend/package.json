@@ -1,0 +1,23 @@
+{
+  "name": "uniswap-v3-sepolia-fork-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Custom Uniswap V3-style backend deployed to Sepolia.",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test",
+    "deploy:sepolia": "hardhat run scripts/deploy-sepolia.js --network sepolia",
+    "configure:public-pool": "node scripts/configure-public-sepolia-pool.js"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.24.1",
+    "solc": "0.7.6"
+  },
+  "dependencies": {
+    "@uniswap/v3-core": "^1.0.1",
+    "@uniswap/v3-periphery": "^1.4.4",
+    "ethers": "^6.13.5"
+  }
+}
