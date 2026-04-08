@@ -1,0 +1,44 @@
+name: Deploy Uniswap V3 Sepolia Fork Frontend
+
+on:
+  push:
+    branches:
+      - main
+      - master
+      - codex/**
+    paths:
+      - ".github/workflows/deploy-uniswap-v3-sepolia-fork-pages.yml"
+      - "uniswap-v3-sepolia-fork/frontend/**"
+      - "uniswap-v3-sepolia-fork/backend/scripts/configure-public-sepolia-pool.js"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: uniswap-v3-sepolia-fork-pages
+  cancel-in-progress: true
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload frontend artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: uniswap-v3-sepolia-fork/frontend
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

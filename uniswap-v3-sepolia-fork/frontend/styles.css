@@ -1,0 +1,61 @@
+:root {
+  --bg: #08111f;
+  --panel: rgba(12, 26, 49, 0.84);
+  --border: rgba(123, 173, 255, 0.16);
+  --text: #edf4ff;
+  --muted: #9bb6db;
+  --accent: #36b37e;
+  --accent-2: #38a4ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: var(--text);
+  font-family: "Segoe UI", "PingFang SC", sans-serif;
+  background:
+    radial-gradient(circle at top right, rgba(56, 164, 255, 0.22), transparent 25%),
+    radial-gradient(circle at bottom left, rgba(54, 179, 126, 0.18), transparent 22%),
+    linear-gradient(180deg, #06101d 0%, #091425 100%);
+}
+
+.app-shell {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px 64px;
+}
+
+.hero,
+.card {
+  border: 1px solid var(--border);
+  background: var(--panel);
+  border-radius: 28px;
+  backdrop-filter: blur(16px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.28);
+}
+
+.hero {
+  padding: 32px;
+  margin-bottom: 20px;
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.84rem;
+  color: var(--muted);
+}
+
+.subcopy {
+  max-width: 720px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.card {
+  padding: 24px;
+}
